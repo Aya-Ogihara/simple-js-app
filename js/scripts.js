@@ -1,5 +1,3 @@
-
-
 let pokemonList = [{
   name: 'Bulbasaur',
   nameInJapanese: 'フシギダネ',
@@ -26,6 +24,13 @@ let pokemonList = [{
   type: 'electric'
 }];
 
+for (let i = 0; i < pokemonList.length; i++) {
+  if (pokemonList[i].height > 0.6) { //print an extra comment '- Wow, that's big!' at end
+    document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ') - Wow, that\'s big!</p>');
+  } else {
+    document.write('<p>' + pokemonList[i].name + ' (height: ' + pokemonList[i].height + ')</p>');
+  }
+}
 
 
 
