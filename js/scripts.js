@@ -41,11 +41,15 @@ const pokemonRepository = (function () {
 })();
 
 pokemonRepository.getAll().forEach(function(pokemon) {
-  if (pokemon.height > 0.6) { //print an extra comment '- Wow, that's big!' at end
-    document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ') - Wow, that\'s big!</p>');
-  } else {
-    document.write('<p>' + pokemon.name + ' (height: ' + pokemon.height + ')</p>');
-  }
+
+let listPokemon = document.querySelector('.pokemon-list');
+let listItem = document.createElement('li');
+let button = document.createElement('button');
+button.innerText = pokemon.name;
+button.classList.add('list-item')
+listItem.appendChild(button);
+listPokemon.appendChild(listItem);
+
 });
 
 
