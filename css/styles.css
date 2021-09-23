@@ -1,0 +1,36 @@
+/* pokemon yellow #F6C707
+pokemon blue #204AA6 */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 600px;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  background: #f8f8f8;
+  padding: 100px 50px;
+}
+
+.list-item {
+  display: block;
+  width: 90%;
+  margin: 20px auto;
+  background: #204AA6;
+  color: #fff;
+  border: 3px solid #F6C707;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 10px;
+  transition-duration: 0.5s;
+}
+
+.list-item:hover {
+  opacity: 0.8;
+}
