@@ -30,6 +30,10 @@ const pokemonRepository = (function() {
 
   function showDetails(pokemon) {
     loadDtails(pokemon).then(function() {
+      // Clear exisiting content in the modalContainer
+      modalContainer.innerHTML = ' ';
+
+      // modal outline
       const modal = document.createElement('div');
       modal.classList.add('modal');
 
