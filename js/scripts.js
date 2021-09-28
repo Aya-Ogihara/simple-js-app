@@ -30,8 +30,6 @@ const pokemonRepository = (function() {
 
   function showDetails(pokemon) {
     loadDtails(pokemon).then(function() {
-      // Clear exisiting content in the modalContainer
-      modalContainer.innerHTML = ' ';
 
       // modal outline
       const modal = document.createElement('div');
@@ -64,6 +62,9 @@ const pokemonRepository = (function() {
 
   function hideDetails() {
     modalContainer.classList.remove('is-visible');
+
+    // Clear exisiting content in the modalContainer
+    modalContainer.innerHTML = ' ';
   }
   // Hide the modal by press 'Esc' key
   window.addEventListener('keydown', (e) => {
