@@ -32,6 +32,7 @@ ul {
   font-size: 24px;
   border-radius: 10px;
   transition-duration: 0.5s;
+  text-transform: capitalize;
 }
 
 .item-button:hover {
@@ -44,6 +45,10 @@ Modal styling
 =====*/
 #pokemonModal {
   margin: 30vh auto;
+}
+
+.modal-title {
+  text-transform: capitalize;
 }
 
 .modal-content {
