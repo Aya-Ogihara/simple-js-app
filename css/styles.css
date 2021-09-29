@@ -43,9 +43,6 @@ ul {
 /*=====
 Modal styling
 =====*/
-#pokemonModal {
-  margin: 30vh auto;
-}
 
 .modal-title {
   text-transform: capitalize;
