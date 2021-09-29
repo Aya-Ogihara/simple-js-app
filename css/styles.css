@@ -6,24 +6,17 @@ pokemon-blue #204AA6 */
   box-sizing: border-box;
 }
 
-#logo {
-  display: block;
-  margin: 3vh auto;
-}
-
 body {
   width: 600px;
   margin: 0 auto;
-  background: #f8f8f8;
+  background: #F8F9FA;
 }
 
 ul {
-  list-style: none;
-  padding: 30px;
   background: #fff;
 }
 
-.item-button {
+/* .item-button {
   display: block;
   width: 90%;
   margin: 20px auto;
@@ -34,7 +27,7 @@ ul {
   font-size: 24px;
   border-radius: 10px;
   transition-duration: 0.5s;
-}
+} */
 
 .item-button:hover {
   opacity: 0.8;
