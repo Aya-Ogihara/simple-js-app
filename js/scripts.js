@@ -34,6 +34,7 @@ const pokemonRepository = (function() {
       const modalBody = $('.modal-body');
       const modalTitle = $('.modal-title');
 
+
       modalBody.empty();
       modalTitle.empty();
 
@@ -42,11 +43,15 @@ const pokemonRepository = (function() {
       imgElement.attr('src', pokemon.imageUrl);
       const weightElement = $('<p>Weight: ' + pokemon.weight + '</p>');
       const heightElement = $('<p>Height: ' + pokemon.height + '</p>');
+      const typeElement = $('<p class="text-capitalize">type: ' + pokemon.types.join(', ') + '</p>');
+      const abilityElement = $('<p class="text-capitalize">ability: ' + pokemon.abilities.join(', ') + '</p>');
 
       modalTitle.append(nameElement);
       modalBody.append(imgElement);
       modalBody.append(weightElement);
       modalBody.append(heightElement);
+      modalBody.append(typeElement);
+      modalBody.append(abilityElement);
 
     });
   }
@@ -75,7 +80,14 @@ const pokemonRepository = (function() {
       item.imageUrl = details.sprites.front_default;
       item.height = details.height;
       item.weight = details.weight;
-      item.types = details.types;
+      item.types = [];
+      for (let i = 0; i < details.types.length; i++) {
+        item.types.push(details.types[i].type.name);
+      }
+      item.abilities = [];
+      for(let i = 0; i < details.abilities.length; i++) {
+        item.abilities.push(details.abilities[i].ability.name);
+      }
     }).catch(function(e) {
       console.log(e);
     });
