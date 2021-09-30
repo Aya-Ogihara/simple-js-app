@@ -1,4 +1,5 @@
 # Pokédex (JavaScript App) features 
+Application URL: https://Aya-Ogihara.github.io/simple-js-app
 
 ## User Goals
 Users should be able to view a list of Pokémon and see more details for a given data item on demand.
