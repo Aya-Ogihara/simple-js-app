@@ -1,6 +1,22 @@
 const pokemonRepository = (function() {
   const pokemonList = [];
   const apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+  const filter = document.querySelector('#filter');
+
+  //Filter Pokemon event
+  filter.addEventListener('input', function() {
+    const pokemons = document.querySelectorAll('.btn');
+    const value = filter.value.toLowerCase();
+
+    pokemons.forEach(function(pokemon) {
+      if (pokemon.innerText.toLowerCase().indexOf(value) > -1) {
+        pokemon.style.display = '';
+      } else {
+        pokemon.style.display = 'none';
+      }
+    });
+  });
+
 
   function getAll() {
     return pokemonList;
@@ -33,7 +49,6 @@ const pokemonRepository = (function() {
     loadDtails(pokemon).then(function() {
       const modalBody = $('.modal-body');
       const modalTitle = $('.modal-title');
-
 
       modalBody.empty();
       modalTitle.empty();
@@ -85,7 +100,7 @@ const pokemonRepository = (function() {
         item.types.push(details.types[i].type.name);
       }
       item.abilities = [];
-      for(let i = 0; i < details.abilities.length; i++) {
+      for (let i = 0; i < details.abilities.length; i++) {
         item.abilities.push(details.abilities[i].ability.name);
       }
     }).catch(function(e) {
