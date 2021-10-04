@@ -46,20 +46,20 @@ const pokemonRepository = (function() {
   }
 
   function showDetails(pokemon) {
-    loadDtails(pokemon).then(function() {
+    loadDetails(pokemon).then(function() {
       const modalBody = $('.modal-body');
       const modalTitle = $('.modal-title');
 
       modalBody.empty();
       modalTitle.empty();
 
-      const nameElement = $('<h1>' + pokemon.name + '</h1>');
+      const nameElement = $(`<h1>${pokemon.name}</h1>`);
       const imgElement = $('<img class="modal-img">');
       imgElement.attr('src', pokemon.imageUrl);
-      const weightElement = $('<p>Weight: ' + pokemon.weight + '</p>');
-      const heightElement = $('<p>Height: ' + pokemon.height + '</p>');
-      const typeElement = $('<p class="text-capitalize">type: ' + pokemon.types.join(', ') + '</p>');
-      const abilityElement = $('<p class="text-capitalize">ability: ' + pokemon.abilities.join(', ') + '</p>');
+      const weightElement = $(`<p>Weight: ${pokemon.weight}</p>`);
+      const heightElement = $(`<p>Height: ${pokemon.height}</p>`);
+      const typeElement = $(`<p class="text-capitalize">type: ${pokemon.types.join(', ')}</p>`);
+      const abilityElement = $(`<p class="text-capitalize">type: ${pokemon.abilities.join(', ')}</p>`);
 
       modalTitle.append(nameElement);
       modalBody.append(imgElement);
@@ -87,7 +87,7 @@ const pokemonRepository = (function() {
     });
   }
 
-  function loadDtails(item) {
+  function loadDetails(item) {
     const url = item.detailsUrl;
     return fetch(url).then(function(response) {
       return response.json();
@@ -114,7 +114,7 @@ const pokemonRepository = (function() {
     addListItem: addListItem,
     showDetails: showDetails,
     loadList: loadList,
-    loadDtails: loadDtails
+    loadDetails: loadDetails
   };
 
 })();
