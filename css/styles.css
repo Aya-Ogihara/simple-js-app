@@ -9,7 +9,7 @@ pokemon-blue #204AA6 */
 body {
   width: 600px;
   margin: 0 auto;
-  background: #F8F9FA;
+  background: #f8f9fa;
 }
 
 main {
@@ -23,11 +23,11 @@ main {
 
 .item-button {
   display: block;
-  width: 90%;
+  width: 280px;
   margin: 10px auto;
-  background: #204AA6;
+  background: #204aa6;
   color: #fff;
-  border: 3px solid #F6C707;
+  border: 3px solid #f6c707;
   padding: 20px;
   font-size: 24px;
   border-radius: 10px;
@@ -38,6 +38,12 @@ main {
 .item-button:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 /*=====

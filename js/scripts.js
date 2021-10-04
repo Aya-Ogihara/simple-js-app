@@ -35,7 +35,6 @@ const pokemonRepository = (function() {
     button.classList.add('btn', 'btn-primary');
     button.setAttribute('data-toggle', 'modal');
     button.setAttribute('data-target', '#pokemonModal');
-    listItem.classList.add('group-list-item');
     listItem.appendChild(button);
     listPokemon.appendChild(listItem);
 
