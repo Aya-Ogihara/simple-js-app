@@ -52,14 +52,14 @@ const pokemonRepository = (function() {
       modalBody.empty();
       modalTitle.empty();
 
-      const nameElement = $('<h1>' + pokemon.name + '</h1>');
+      const nameElement = $(`<h1>${pokemon.name}</h1>`);
       const imgElement = $('<img class="modal-img">');
       imgElement.attr('src', pokemon.imageUrl);
-      const weightElement = $('<p>Weight: ' + pokemon.weight + '</p>');
-      const heightElement = $('<p>Height: ' + pokemon.height + '</p>');
-      const typeElement = $('<p class="text-capitalize">type: ' + pokemon.types.join(', ') + '</p>');
-      const abilityElement = $('<p class="text-capitalize">ability: ' + pokemon.abilities.join(', ') + '</p>');
-
+      const weightElement = $(`<p>Weight: ${pokemon.weight}</p>`);
+      const heightElement = $(`<p>Height: ${pokemon.height}</p>`);
+      const typeElement = $(`<p class="text-capitalize">type: ${pokemon.types.join(', ')}</p>`);
+      const abilityElement = $(`<p class="text-capitalize">type: ${pokemon.abilities.join(', ')}</p>`);
+      
       modalTitle.append(nameElement);
       modalBody.append(imgElement);
       modalBody.append(weightElement);
